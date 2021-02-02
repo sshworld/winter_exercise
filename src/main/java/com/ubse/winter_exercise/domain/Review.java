@@ -1,5 +1,7 @@
 package com.ubse.winter_exercise.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -12,6 +14,7 @@ public class Review {
 
     @ManyToOne
     @JoinColumn(name = "orderSeq")
+    @JsonIgnore
     private Orders order;
 
     @Column

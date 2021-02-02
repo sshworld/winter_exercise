@@ -1,5 +1,7 @@
 package com.ubse.winter_exercise.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity(name = "orderMenu")
@@ -11,6 +13,7 @@ public class OrderMenu {
 
     @ManyToOne
     @JoinColumn(name = "orderSeq")
+    @JsonIgnore
     private Orders order;
 
     @ManyToOne

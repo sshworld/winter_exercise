@@ -1,5 +1,7 @@
 package com.ubse.winter_exercise.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity(name = "menuGroup")
@@ -11,6 +13,7 @@ public class MenuGroup {
 
     @ManyToOne
     @JoinColumn(name = "storeSeq")
+    @JsonIgnore
     private Stores store;
 
     @Column

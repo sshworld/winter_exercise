@@ -11,6 +11,7 @@ public class Menu {
 
     @ManyToOne
     @JoinColumn(name = "menuGroupSeq")
+
     private MenuGroup menuGroup;
 
     @Column

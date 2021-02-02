@@ -1,5 +1,7 @@
 package com.ubse.winter_exercise.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity(name = "stores")
@@ -11,6 +13,7 @@ public class Stores {
 
     @ManyToOne
     @JoinColumn(name = "categorySeq")
+    @JsonIgnore
     private Category category;
 
     @Column

@@ -1,5 +1,7 @@
 package com.ubse.winter_exercise.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -11,6 +13,7 @@ public class Orders {
 
     @ManyToOne
     @JoinColumn(name = "userId")
+    @JsonIgnore
     private Users user;
 
     @Column
